@@ -9,6 +9,7 @@ class Ball {
     Point m_center;
 
 public:
+    ~Ball() = default;
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
     void draw(Painter& painter) const;
