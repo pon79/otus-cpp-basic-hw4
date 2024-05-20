@@ -4,6 +4,10 @@
 #include "Velocity.hpp"
 
 class Ball {
+
+    Velocity m_velocity;
+    Point m_centerPoint;
+
 public:
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
