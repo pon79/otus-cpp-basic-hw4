@@ -6,7 +6,7 @@
 class Ball {
 
     Velocity m_velocity;
-    Point m_centerPoint;
+    Point m_center;
 
 public:
     void setVelocity(const Velocity& velocity);
