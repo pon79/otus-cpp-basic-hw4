@@ -7,8 +7,10 @@ class Ball {
 
     Velocity m_velocity;
     Point m_center;
+    double m_radius;
 
 public:
+    Ball(const Point center, const double radius );
     ~Ball() = default;
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;

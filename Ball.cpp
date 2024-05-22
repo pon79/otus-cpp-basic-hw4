@@ -1,6 +1,13 @@
 #include "Ball.hpp"
 #include <cmath>
 
+Ball::Ball(const Point center, const double radius) :
+    m_center{ center }
+  , m_radius{ radius }
+{
+
+}
+
 /**
  * Задает скорость объекта
  * @param velocity новое значение скорости
@@ -54,7 +61,7 @@ Point Ball::getCenter() const {
  */
 double Ball::getRadius() const {
     // TODO: место для доработки
-    return {};
+    return m_radius;
 }
 
 /**
