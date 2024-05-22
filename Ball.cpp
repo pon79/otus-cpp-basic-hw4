@@ -1,9 +1,10 @@
 #include "Ball.hpp"
 #include <cmath>
 
-Ball::Ball(const Point center, const double radius) :
+Ball::Ball(const Point center, const double radius, const Velocity velocity) :
     m_center{ center }
   , m_radius{ radius }
+  , m_velocity{ velocity }
 {
 
 }
