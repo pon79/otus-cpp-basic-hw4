@@ -5,10 +5,6 @@
 
 class Ball {
 
-    Velocity m_velocity;
-    Point m_center;
-    double m_radius;
-
 public:
     Ball(const Point center, const double radius );
     ~Ball() = default;
@@ -19,4 +15,9 @@ public:
     Point getCenter() const;
     double getRadius() const;
     double getMass() const;
+
+private:
+    Point m_center;
+    double m_radius;
+    Velocity m_velocity;
 };
