@@ -1,4 +1,6 @@
 #pragma once
+
+#include "Color.hpp"
 #include "Painter.hpp"
 #include "Point.hpp"
 #include "Velocity.hpp"
@@ -6,7 +8,7 @@
 class Ball {
 
 public:
-    Ball(const Point center, const double radius, const Velocity velocity);
+    Ball(const Point center, const Color color, const double radius, const Velocity velocity);
     ~Ball() = default;
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
@@ -18,6 +20,8 @@ public:
 
 private:
     Point m_center;
+    Color m_color;
     double m_radius;
     Velocity m_velocity;
+
 };
