@@ -38,9 +38,7 @@ World::World(const std::string& worldFilePath) {
 
     double radius;
 
-    double red;
-    double green;
-    double blue;
+    Color color;
 
     bool isCollidable;
 
@@ -51,7 +49,7 @@ World::World(const std::string& worldFilePath) {
         // его скорости (vx, vy)
         stream >> point >> velocity;
         // Читаем три составляющие цвета шара
-        stream >> red >> green >> blue;
+        stream >> color;
         // Читаем радиус шара
         stream >> radius;
         // Читаем свойство шара isCollidable, которое
@@ -68,7 +66,7 @@ World::World(const std::string& worldFilePath) {
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        balls.push_back({point, {red, green, blue}, radius, velocity});
+        balls.push_back({point, color, radius, velocity});
     }
 }
 
