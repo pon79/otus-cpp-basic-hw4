@@ -66,7 +66,7 @@ World::World(const std::string& worldFilePath) {
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        balls.push_back({point, color, radius, velocity});
+        balls.push_back({point, isCollidable, color, radius, velocity});
     }
 }
 
