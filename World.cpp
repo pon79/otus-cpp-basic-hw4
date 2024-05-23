@@ -1,5 +1,6 @@
 #include "World.hpp"
 #include "Painter.hpp"
+#include "Velocity.hpp"
 #include <fstream>
 
 // Длительность одного тика симуляции.
@@ -33,8 +34,8 @@ World::World(const std::string& worldFilePath) {
      * этот код, научившись читать сразу Point, Color...
      */
     Point point;
-    double vx;
-    double vy;
+    Velocity velocity;
+
     double radius;
 
     double red;
@@ -48,7 +49,7 @@ World::World(const std::string& worldFilePath) {
     while (stream.peek(), stream.good()) {
         // Читаем координаты центра шара (x, y) и вектор
         // его скорости (vx, vy)
-        stream >> point >> vx >> vy;
+        stream >> point >> velocity;
         // Читаем три составляющие цвета шара
         stream >> red >> green >> blue;
         // Читаем радиус шара
@@ -67,7 +68,7 @@ World::World(const std::string& worldFilePath) {
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        balls.push_back({point, {red, green, blue}, radius, {{vx, vy}}});
+        balls.push_back({point, {red, green, blue}, radius, velocity});
     }
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "Point.hpp"
 #include <cmath>
+#include <iostream>
 
 class Velocity {
   public:
@@ -28,3 +29,18 @@ class Velocity {
   private:
     Point vec;
 };
+
+inline std::istream& operator>>(std::istream& stream, Velocity& velocity) {
+    double xv, yv;
+
+    stream >> xv >> yv;
+
+    if( stream ) {
+        velocity.setVector( {xv, yv} );
+    } else {
+        stream.clear( std::istream::failbit );
+    }
+
+    return stream;
+}
+

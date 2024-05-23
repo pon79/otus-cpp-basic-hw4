@@ -39,6 +39,7 @@ add_executable(physics
         Color.cpp Color.hpp
         Painter.cpp Painter.hpp
         Point.hpp
+        Velocity.hpp
         black_box/Application.cpp black_box/Application.hpp
         black_box/View.cpp black_box/View.hpp
         black_box/PainterImpl.cpp black_box/PainterImpl.hpp)

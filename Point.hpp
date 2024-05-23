@@ -21,7 +21,6 @@ inline std::istream& operator>>(std::istream& stream, Point& point) {
         point.x = x;
         point.y = y;
     } else {
-        std::cerr << "bad input stream";
         stream.clear( std::istream::failbit );
     }
 
