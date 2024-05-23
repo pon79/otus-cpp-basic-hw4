@@ -32,8 +32,7 @@ World::World(const std::string& worldFilePath) {
      * как и (red, green, blue). Опять же, можно упростить
      * этот код, научившись читать сразу Point, Color...
      */
-    double x;
-    double y;
+    Point point;
     double vx;
     double vy;
     double radius;
@@ -49,7 +48,7 @@ World::World(const std::string& worldFilePath) {
     while (stream.peek(), stream.good()) {
         // Читаем координаты центра шара (x, y) и вектор
         // его скорости (vx, vy)
-        stream >> x >> y >> vx >> vy;
+        stream >> point >> vx >> vy;
         // Читаем три составляющие цвета шара
         stream >> red >> green >> blue;
         // Читаем радиус шара
@@ -68,7 +67,7 @@ World::World(const std::string& worldFilePath) {
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
-        balls.push_back({{x, y}, {red, green, blue}, radius, {{vx, vy}}});
+        balls.push_back({point, {red, green, blue}, radius, {{vx, vy}}});
     }
 }
 
